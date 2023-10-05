@@ -1,52 +1,88 @@
-import type { Meta, StoryObj } from '@storybook/vue3';
+import type { Meta, StoryObj } from '@storybook/vue3'
 
-import Button from './Button.vue';
+import Button from './TheButton.vue'
 
-// More on how to set up stories at: https://storybook.js.org/docs/vue/writing-stories/introduction
-const meta = {
+const meta: Meta<typeof Button> = {
   title: 'Example/Button',
   component: Button,
-  // This component will have an automatically generated docsPage entry: https://storybook.js.org/docs/vue/writing-docs/autodocs
   tags: ['autodocs'],
   argTypes: {
     size: { control: 'select', options: ['small', 'medium', 'large'] },
     backgroundColor: { control: 'color' },
-    onClick: { action: 'clicked' },
+    onClick: { action: 'clicked' }
   },
-  args: { primary: false }, // default value
-} satisfies Meta<typeof Button>;
+  args: { primary: false }
+} satisfies Meta<typeof Button>
 
-export default meta;
-type Story = StoryObj<typeof meta>;
-/*
- *👇 Render functions are a framework specific feature to allow you control on how the component renders.
- * See https://storybook.js.org/docs/vue/api/csf
- * to learn how to use render functions.
- */
-export const Primary: Story = {
+export default meta
+type Story = StoryObj<typeof Button>
+
+export const Default: Story = {
+  render: (args) => ({
+    components: { Button },
+    setup() {
+      return { args }
+    },
+    template: '<Button v-bind="args"/>'
+  }),
   args: {
     primary: true,
-    label: 'Button',
-  },
-};
+    label: 'Button'
+  }
+}
+
+export const Primary: Story = {
+  render: (args) => ({
+    components: { Button },
+    setup() {
+      return { args }
+    },
+    template: '<Button v-bind="args"/>'
+  }),
+  args: {
+    primary: true,
+    label: 'Button'
+  }
+}
 
 export const Secondary: Story = {
+  render: (args) => ({
+    components: { Button },
+    setup() {
+      return { args }
+    },
+    template: '<Button v-bind="args"/>'
+  }),
   args: {
-    primary: false,
-    label: 'Button',
-  },
-};
+    ...Primary.args,
+    primary: false
+  }
+}
 
 export const Large: Story = {
+  render: (args) => ({
+    components: { Button },
+    setup() {
+      return { args }
+    },
+    template: '<Button v-bind="args"/>'
+  }),
   args: {
-    label: 'Button',
-    size: 'large',
-  },
-};
+    ...Primary.args,
+    size: 'large'
+  }
+}
 
 export const Small: Story = {
+  render: (args) => ({
+    components: { Button },
+    setup() {
+      return { args }
+    },
+    template: '<Button v-bind="args"/>'
+  }),
   args: {
-    label: 'Button',
-    size: 'small',
-  },
-};
+    ...Primary.args,
+    size: 'small'
+  }
+}

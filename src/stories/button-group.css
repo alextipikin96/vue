@@ -1,0 +1,25 @@
+.storybook-button-group {
+  display: flex;
+}
+
+.storybook-button-group button:first-child {
+  border-right: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.storybook-button-group button:last-child {
+  border-right: none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.storybook-button-group button {
+  border: 1px solid #ccc;
+  border-left: none;
+}
+
+.storybook-button-group button:hover {
+  background-color: #eee;
+  cursor: pointer;
+}

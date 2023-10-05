@@ -2,29 +2,56 @@
   font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
   border: 0;
-  border-radius: 3em;
+  border-radius: 0.5em;
   cursor: pointer;
   display: inline-block;
   line-height: 1;
 }
-.storybook-button--primary {
-  color: white;
-  background-color: #1ea7fd;
+
+.storybook-button:hover {
+  background-color: #f66370;
 }
+
+.storybook-button:active {
+  background-color: #c4414d;
+}
+
+.storybook-button:focus {
+  box-shadow: 0 0 0 0.2rem rgb(246 82 97 / 50%);
+}
+
+.storybook-button:hover {
+  transition: 0.3s ease-in-out;
+}
+
+.storybook-button--primary {
+  color: #ffffff;
+  background-color: #f65261;
+}
+
 .storybook-button--secondary {
-  color: #333;
-  background-color: transparent;
+  color: #ffffff;
+  background-color: #424242;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
 }
+
+
+.storybook-button--secondary:hover {
+  color: #ffffff;
+  transition: 0.3s ease;
+}
+
 .storybook-button--small {
   font-size: 12px;
   padding: 10px 16px;
 }
+
 .storybook-button--medium {
   font-size: 14px;
   padding: 11px 20px;
 }
+
 .storybook-button--large {
   font-size: 16px;
-  padding: 12px 24px;
+  padding: 20px 32px;
 }

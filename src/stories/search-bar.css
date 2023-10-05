@@ -1,0 +1,32 @@
+.storybook-input {
+  font-size: 16px;
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+  width: 50%;
+}
+
+.storybook-input--primary {
+  border: 1px solid #424242;
+  background-color: rgba(255, 255, 255, 0.5);
+
+}
+
+.storybook-input--secondary {
+  border: 1px solid #424242;
+  background-color: rgba(31, 31, 31, 0.5);
+  color: #ffffff;
+
+}
+
+.storybook-input:focus {
+  outline: none;
+}
+
+.storybook-input--primary::placeholder {
+  color: #ffffff;
+}
+
+.storybook-input--secondary::placeholder {
+  color: #424242;
+}
