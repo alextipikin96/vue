@@ -1,7 +1,7 @@
 <template>
-  <footer class="app-footer">
+  <div class="app-footer">
     <NetflixLogo />
-  </footer>
+  </div>
 </template>
 
 <style>
