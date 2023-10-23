@@ -1,13 +1,13 @@
 <template>
-  <header class="header">
+  <div class="header">
     <NetflixLogo />
     <section class="search-bar">
       <h1>FIND YOUR MOVIE</h1>
       <SearchBar secondary placeholder="search" />
-      <NetflixButton primary size="large" @click="$emit('click')" label="search" />
+      <NetflixButton primary size="large" label="search" />
       <MenuBar menuTitle="search by" btn1="title" btn2="genre" />
     </section>
-  </header>
+  </div>
 </template>
 
 <style>
@@ -17,16 +17,10 @@
   padding: 16px 36px;
 }
 
-
-.bold {
-  font-weight: bold;
-}
-
 h1 {
   font-size: 64px;
   color: var(--color-white);
 }
-
 </style>
 
 <script lang="ts">

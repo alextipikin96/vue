@@ -1,11 +1,11 @@
 <template>
   <li class="movie-item">
-    <img :src="`src/assets/img/movies/${movie.id + 1}.jpeg`" :alt="movie.title">
+    <img :src="'/src/assets/img/poster-placeholder.jpeg'" :data-srcset="movie.posterurl" :alt="movie.title" v-lazyload>
     <div class="movie-item--desc">
       <span>{{ movie.title }}</span>
-      <span class="movie-item--desc-date">{{ movie.date }}</span>
+      <span class="movie-item--desc-date">{{ movie.year }}</span>
     </div>
-    <span>{{ movie.desc }}</span>
+    <span>{{ movie.genres.toString() }}</span>
   </li>
 </template>
 

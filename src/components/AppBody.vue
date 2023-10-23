@@ -1,7 +1,7 @@
 <template>
-  <body class="app-body">
+  <div class="app-main">
     <MovieList />
-  </body>
+  </div>
 </template>
 
 <script lang="ts">
@@ -15,7 +15,7 @@ export default {
 </script>
 
 <style>
-.app-body {
+.app-main {
   padding: 32px;
 }
 </style>
